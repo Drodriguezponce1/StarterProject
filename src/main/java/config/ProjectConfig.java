@@ -2,9 +2,12 @@ package config;
 
 import main.Person;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
+@ComponentScan(basePackages = "main")
 public class ProjectConfig {
 
     /* I have learned that this can be automated later once we get to the Spring sections.
@@ -14,7 +17,8 @@ public class ProjectConfig {
      *  A Bean is essentially a class or object defined to be under the 'context' of Spring
      * */
 
-    @Bean
+    @Bean("lol")
+    @Primary
     Person person(){
         Person p = new Person();
         p.setName("Danny");
