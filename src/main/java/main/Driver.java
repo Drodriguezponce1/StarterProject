@@ -25,7 +25,7 @@ public class Driver {
         System.out.println(dd);
 
         //Trying to register a bean
-        // this is very interesting, but feel like it could be better, im speaking in terms of making more Dog objs than
+        // this is very interesting, but feel like it could be better; im speaking in terms of making more Dog objs than
         // one needs
         Dog dog = new Dog();
         dog.setName("Rodger");
