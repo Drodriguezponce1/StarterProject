@@ -47,5 +47,8 @@ public class Driver {
 
         System.out.println(ddd);
 
+        Person pp = context.getBean("ynnad", Person.class);
+        System.out.println(pp);
+
     }
 }

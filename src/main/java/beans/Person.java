@@ -4,6 +4,7 @@ public class Person {
 
     private String name;
     private int age;
+    private Dog dog;
 
     public Person(String name, int age){
         this.name = name;
@@ -20,6 +21,10 @@ public class Person {
         this.name = name;
     }
 
+    public void setDog(Dog dog) {
+        this.dog = dog;
+    }
+
     public String getName() {
         return name;
     }
@@ -28,8 +33,12 @@ public class Person {
         return age;
     }
 
+    public Dog getDog() {
+        return this.dog;
+    }
+
     @Override
     public String toString(){
-        return "[ Name: " + this.getName() + ", Age: " + this.getAge() + "]";
+        return "[ Name: " + this.getName() + ", Age: " + this.getAge() + ", Dog: " + this.getDog() + "]";
     }
 }

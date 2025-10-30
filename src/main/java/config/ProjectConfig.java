@@ -1,5 +1,6 @@
 package config;
 
+import beans.Dog;
 import beans.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -44,5 +45,23 @@ public class ProjectConfig {
     @Bean
     Integer ten() {
         return 10;
+    }
+
+    @Bean
+    @Primary
+    Dog conch() {
+        Dog d = new Dog();
+        d.setName("YKCUL");
+
+        return d;
+    }
+
+    @Bean("ynnad")
+    Person ynnad() {
+        Person ynnad = new Person("YnnaD", 99);
+
+        ynnad.setDog(conch());
+        return ynnad;
+
     }
 }
