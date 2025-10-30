@@ -3,6 +3,8 @@ package main;
 import config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.function.Supplier;
+
 public class Driver {
     public static void main(String[] args) {
 
@@ -21,5 +23,26 @@ public class Driver {
         dd.setName("Lucky");
 
         System.out.println(dd);
+
+        //Trying to register a bean
+        // this is very interesting, but feel like it could be better, im speaking in terms of making more Dog objs than
+        // one needs
+        Dog dog = new Dog();
+        dog.setName("Rodger");
+
+        Supplier<Dog> DogSupplier = () -> dog;
+
+        context.registerBean("rodger", Dog.class, DogSupplier);
+        Dog ddd = context.getBean("rodger", Dog.class);
+
+        dog.setName("regdor");
+        /* Wanted to try and replicate the above code using lesser lines of code:
+         * context.registerBean("practice", Dog.class, () -> new Dog());
+         * ddd = context.getBean("practice", Dog.class);
+         * ddd.setName("practice");
+         * */
+
+        System.out.println(ddd);
+
     }
 }
