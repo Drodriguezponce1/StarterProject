@@ -36,6 +36,7 @@ public class Driver {
         Dog ddd = context.getBean("rodger", Dog.class);
 
         dog.setName("regdor");
+
         /* Wanted to try and replicate the above code using lesser lines of code:
          * context.registerBean("practice", Dog.class, () -> new Dog());
          * ddd = context.getBean("practice", Dog.class);
