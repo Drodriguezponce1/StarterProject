@@ -1,13 +1,13 @@
 package config;
 
-import main.Person;
+import beans.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 @Configuration
-@ComponentScan(basePackages = "main")
+@ComponentScan(basePackages = "beans")
 public class ProjectConfig {
 
     /* I have learned that this can be automated later once we get to the Spring sections.

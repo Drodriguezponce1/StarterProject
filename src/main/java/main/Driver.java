@@ -1,5 +1,7 @@
 package main;
 
+import beans.Dog;
+import beans.Person;
 import config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
