@@ -16,6 +16,7 @@ public class Driver {
         System.out.println(p);
         System.out.println(d);
 
+        // This was essential for when you do not create an object of Dog in the config file, because it had context.
         Dog dd = context.getBean(Dog.class);
         dd.setName("Lucky");
 
