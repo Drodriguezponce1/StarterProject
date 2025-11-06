@@ -2,6 +2,8 @@ package main;
 
 import beans.Dog;
 import beans.Person;
+import beans.Persona;
+
 import config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -53,6 +55,14 @@ public class Driver {
 
         //testing another way for direct wiring
         System.out.println(context.getBean("figaro", Person.class));
+
+        //wanted to test out the autowired
+        Persona persona = context.getBean(Persona.class);
+
+        //HERE I AM CHANGING THE conch BEAN BECAUSE EARLIER WE DEFINED A Dog BEAN AND GOT THE CONCH BEAN
+        dd.setName("YKCYUL");
+        persona.setName("YNNAD");
+        System.out.println(persona);
 
     }
 }
