@@ -47,8 +47,12 @@ public class Driver {
 
         System.out.println(ddd);
 
+        //tested the direct wiring approach
         Person pp = context.getBean("ynnad", Person.class);
         System.out.println(pp);
+
+        //testing another way for direct wiring
+        System.out.println(context.getBean("figaro", Person.class));
 
     }
 }

@@ -1,9 +1,13 @@
 package beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Person {
 
     private String name;
     private int age;
+
+    @Autowired
     private Dog dog;
 
     public Person(String name, int age){

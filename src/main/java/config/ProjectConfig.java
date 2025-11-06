@@ -64,4 +64,14 @@ public class ProjectConfig {
         return ynnad;
 
     }
+
+    @Bean("figaro")
+    Person figaro(Dog dog) {
+        Person figaro = new Person("Figaro", 888);
+        Dog doom = new Dog();
+        doom.setName("MF DOOM");
+        figaro.setDog(doom);
+
+        return figaro;
+    }
 }
