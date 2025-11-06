@@ -1,4 +1,4 @@
-package beans;
+package CH1_CH3.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

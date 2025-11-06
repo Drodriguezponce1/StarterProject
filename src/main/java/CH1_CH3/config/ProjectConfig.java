@@ -1,14 +1,16 @@
-package config;
+package CH1_CH3.config;
 
-import beans.Dog;
-import beans.Person;
+import CH1_CH3.beans.Dog;
+import CH1_CH3.beans.Person;
+import CH1_CH3.beans.Persona;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 @Configuration
-@ComponentScan(basePackages = "beans")
+@ComponentScan(basePackages = "CH1_CH3")
 public class ProjectConfig {
 
     /* I have learned that this can be automated later once we get to the Spring sections.
@@ -73,5 +75,27 @@ public class ProjectConfig {
         figaro.setDog(doom);
 
         return figaro;
+    }
+
+    @Bean
+    public Dog max() {
+        Dog d = new Dog();
+        d.setName("MAX");
+        return d;
+    }
+
+    @Bean
+    @Primary
+    public Persona persona(Dog dog) {
+        Persona p = new Persona(dog);
+        return p;
+    }
+
+    @Bean("goofy")
+    public Persona goofy(@Qualifier("max") Dog max) {
+        Persona p = new Persona(max);
+
+        p.setName("Goofy");
+        return p;
     }
 }

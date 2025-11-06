@@ -1,7 +1,8 @@
-package beans;
+package CH1_CH3.beans;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -12,7 +13,7 @@ public class Persona {
     private final Dog dog;
 
     @Autowired
-    public Persona(Dog dog) {
+    public Persona(@Qualifier("conch") Dog dog) {
         this.dog = dog;
     }
 
