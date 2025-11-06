@@ -34,6 +34,7 @@ build/
 ### VS Code ###
 .vscode/
 .env
+qodana.yaml
 
 ### Mac OS ###
 .DS_Store
