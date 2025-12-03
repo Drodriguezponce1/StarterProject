@@ -1,6 +1,8 @@
 package repositories;
 
-
+import model.Comment;
 // stores the comments
-public class CommentRepository {
+public interface CommentRepository {
+
+    void storeComment(Comment comment);
 }
