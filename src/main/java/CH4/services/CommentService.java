@@ -10,10 +10,11 @@ import CH4.model.Comment;
 @Service
 public class CommentService {
 
-    @Autowired
+
     private final CommentRepository commentRepository;
     private final CommentNotificationProxy commentNotificationProxy;
 
+    @Autowired
     public CommentService(CommentRepository commentRepository, CommentNotificationProxy commentNotificationProxy) {
         this.commentRepository = commentRepository;
         this.commentNotificationProxy = commentNotificationProxy;

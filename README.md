@@ -42,3 +42,22 @@
         }
     }
     ```
+
+## Chapter 4:
+
+* In this chapter, we developed a project for publishing a comment
+    * This included uses interfaces for Notifications and Send to a database
+        * This project was a bit more simple and uses simple Print statements
+    * In this project, I used a different structure by creating different packages
+    * I learned that we should not use annotations for:
+        * Interfaces
+        * Classes that dont have any dependencies
+    * New annotations learned:
+        * @Service
+        * @Repository
+      ```
+        @ComponentScan(
+        basePackages = {"CH4/proxies", "CH4/repositories", "CH4/services"} ) 
+      ```
+        * We can also use @Primary or @Quantifier if we have multiple implementations of an interface
+    
