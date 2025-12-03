@@ -1,4 +1,4 @@
-package model;
+package CH4.model;
 
 public class Comment {
 

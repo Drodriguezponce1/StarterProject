@@ -1,11 +1,11 @@
-package main;
+package CH4.main;
 
-import proxies.CommentNotificationProxy;
-import proxies.EmailCommentNotificationProxy;
-import repositories.CommentRepository;
-import repositories.DBCommentRepository;
-import model.Comment;
-import services.CommentService;
+import CH4.proxies.CommentNotificationProxy;
+import CH4.proxies.EmailCommentNotificationProxy;
+import CH4.repositories.CommentRepository;
+import CH4.repositories.DBCommentRepository;
+import CH4.model.Comment;
+import CH4.services.CommentService;
 
 public class Driver {
 

@@ -1,10 +1,10 @@
-package services;
+package CH4.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import proxies.CommentNotificationProxy;
-import repositories.CommentRepository;
-import model.Comment;
+import CH4.proxies.CommentNotificationProxy;
+import CH4.repositories.CommentRepository;
+import CH4.model.Comment;
 //serves as a service to publish a comment
 
 @Service

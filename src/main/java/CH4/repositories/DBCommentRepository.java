@@ -1,7 +1,7 @@
-package repositories;
+package CH4.repositories;
 
 
-import model.Comment;
+import CH4.model.Comment;
 import org.springframework.stereotype.Repository;
 
 @Repository

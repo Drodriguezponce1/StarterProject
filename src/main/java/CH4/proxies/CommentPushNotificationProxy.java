@@ -1,6 +1,6 @@
-package proxies;
+package CH4.proxies;
 
-import model.Comment;
+import CH4.model.Comment;
 import org.springframework.stereotype.Component;
 
 @Component
